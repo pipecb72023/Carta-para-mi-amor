@@ -4,110 +4,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Para mi amor ❤️</title>
+<title>Para mi princesa linda ❤️</title>
 <style>
 *{box-sizing:border-box}
 body{
-  margin:0;padding:22px 14px;min-height:100vh;
-  display:flex;justify-content:center;align-items:center;
-  font-family:Georgia,serif;text-align:center;color:#762343;
-  background:linear-gradient(135deg,#ffe0e9,#fff4f7,#ffc5d8);
+ margin:0;padding:22px 14px;min-height:100vh;
+ display:flex;justify-content:center;align-items:center;
+ font-family:Georgia,serif;text-align:center;color:#762343;
+ background:linear-gradient(135deg,#ffe0e9,#fff4f7,#ffc5d8);
 }
 .container{
-  width:100%;max-width:620px;background:#ffffffed;
-  padding:28px 18px;border-radius:25px;
-  box-shadow:0 10px 35px #a52b5428;
+ width:100%;max-width:620px;background:#ffffffed;
+ padding:28px 18px;border-radius:25px;
+ box-shadow:0 10px 35px #a52b5428;
 }
 h1,h2{color:#b51f59}
 .envelope{
-  border:0;background:none;font-size:100px;
-  cursor:pointer;animation:pulse 1.5s infinite;
+ border:0;background:none;font-size:100px;
+ cursor:pointer;animation:pulse 1.5s infinite;
 }
 @keyframes pulse{50%{transform:scale(1.08)}}
 #letter{display:none;text-align:left;line-height:1.8;animation:fade 1s}
 @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .intro{text-align:center}
-.collage{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:14px;margin:25px 0;
-}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:25px 0}
 .memory{margin:0;text-align:center}
 .memory img{
-  display:block;width:100%;aspect-ratio:3/4;
-  object-fit:cover;border-radius:15px;
-  box-shadow:0 4px 12px #a52b5428;
+ display:block;width:100%;aspect-ratio:3/4;
+ object-fit:cover;border-radius:15px;
+ box-shadow:0 4px 12px #a52b5428;
 }
-.memory figcaption{
-  font-style:italic;font-size:.95rem;
-  line-height:1.5;padding:9px 3px;color:#a12b57;
-}
+.memory figcaption{font-style:italic;font-size:.95rem;line-height:1.5;padding:9px 3px;color:#a12b57}
 .signature{text-align:center;color:#b51f59;font-size:1.2rem;font-weight:bold}
+.invitation{
+ margin-top:30px;padding:22px 14px;border-radius:20px;
+ background:#fff0f5;text-align:center;
+}
+.invitation h2{font-size:1.55rem;line-height:1.5}
+.choice{
+ display:block;width:100%;padding:14px;margin:12px 0;
+ border:0;border-radius:30px;background:#c52d67;color:white;
+ font-size:1rem;font-weight:bold;cursor:pointer;
+}
+.choice.alt{background:white;color:#b51f59;border:2px solid #e9a0bb}
+#answer{display:none;text-align:center;color:#b51f59;font-size:1.1rem;font-weight:bold}
 .heart{position:fixed;bottom:-30px;pointer-events:none;animation:rise 4s linear forwards}
 @keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
 </style>
 </head>
 <body>
 <main class="container">
-  <h1>Para mi persona favorita ❤️</h1>
-  <p>Preparé algo especial para ti...</p>
-  <button class="envelope" id="envelope" onclick="openLetter()" aria-label="Abrir carta">💌</button>
-  <p id="hint">Toca el sobre para abrir tu sorpresa 🥰</p>
+ <h1>Para mi princesa linda ❤️</h1>
+ <p>Preparé algo especial para ti...</p>
+ <button class="envelope" id="envelope" onclick="openLetter()" aria-label="Abrir carta">💌</button>
+ <p id="hint">Toca el sobre para abrir tu sorpresa 🥰</p>
 
-  <section id="letter">
-    <div class="intro">
-      <h2>Mi amor ❤️</h2>
-      <p>Quería regalarte algo diferente: un pequeño rincón de internet donde guardar un poquito de todo lo bonito que siento por ti.</p>
-    </div>
+ <section id="letter">
+  <div class="intro"><h2>Mi princesa linda… ❤️</h2></div>
 
-    <p>Gracias por ser parte de mi vida, por nuestras risas, nuestros abrazos y esos momentos que quizá parecen pequeños, pero que para mí significan muchísimo.</p>
+  <p>¡Feliz primer año juntos! Jejeje. No sabes lo mucho que me costó hacer esta carta virtual, pero quería hacer algo especial para ti. Quiero que sepas que te amo con todo mi corazón y que estoy muy feliz de poder compartir este primer año contigo.</p>
 
-    <h2 class="intro">Nuestros recuerdos 💗</h2>
+  <p>Gracias por cada momento que hemos vivido juntos. Sé que no todo ha sido fácil, pero quiero que sepas que te amo con todo mi corazón y que cada día que pasa me enamoro más de ti y de la mujer que eres.</p>
 
-    <div class="collage">
-      <figure class="memory">
-        <img src="56d53b03-7ee2-4666-850e-5ec411f4a056.jpeg" alt="Un recuerdo juntos">
-        <figcaption>“Entre tantos lugares bonitos, mi favorito siempre será aquel en el que estoy contigo. ❤️”</figcaption>
-      </figure>
+  <p>Gracias por estar conmigo, porque sé que no siempre es fácil estar a mi lado. Sé que tengo miles de errores y muchas cosas por mejorar, pero quiero que sepas que te amo con todo mi corazón. Contigo he vivido momentos increíbles que no cambiaría por nada en el mundo.</p>
 
-      <figure class="memory">
-        <img src="9fc16406-a1bd-4a95-9706-1a14a082be14.jpeg" alt="Un momento especial">
-        <figcaption>“Qué bonito es compartir la vida, los sueños y hasta las cosas más pequeñas contigo.”</figcaption>
-      </figure>
+  <p>Te amo muchísimo y espero que nunca olvides que eres una de las personas más importantes de mi vida. Gracias por este primer año, por tu amor y por todos los recuerdos que hemos construido juntos. Y si me preguntas qué quiero para el futuro, mi respuesta es seguir creando muchísimos recuerdos más contigo. ❤️</p>
 
-      <figure class="memory">
-        <img src="Tezza-0119.jpeg" alt="Un recuerdo que nos hace felices">
-        <figcaption>“Tu sonrisa tiene esa forma tan tuya de hacer que cualquier momento valga la pena. 💕”</figcaption>
-      </figure>
+  <h2 class="intro">Nuestros recuerdos 💗</h2>
 
-      <figure class="memory">
-        <img src="e39f8eda-6e92-4d5c-8f89-647fb2f9ba88.jpeg" alt="Un recuerdo de los dos">
-        <figcaption>“Tenemos recuerdos hermosos, y me emociona pensar en todos los que todavía nos faltan por vivir juntos. ✨”</figcaption>
-      </figure>
-    </div>
+  <div class="collage">
+   <figure class="memory">
+    <img src="56d53b03-7ee2-4666-850e-5ec411f4a056.jpeg" alt="Nuestro recuerdo">
+    <figcaption>“Entre tantos lugares bonitos, mi favorito siempre será aquel en el que estoy contigo. ❤️”</figcaption>
+   </figure>
+   <figure class="memory">
+    <img src="9fc16406-a1bd-4a95-9706-1a14a082be14.jpeg" alt="Un momento especial">
+    <figcaption>“Qué bonito es compartir la vida, los sueños y hasta las cosas más pequeñas contigo.”</figcaption>
+   </figure>
+   <figure class="memory">
+    <img src="Tezza-0119.jpeg" alt="Un recuerdo feliz">
+    <figcaption>“Tu sonrisa tiene esa forma tan tuya de hacer que cualquier momento valga la pena. 💕”</figcaption>
+   </figure>
+   <figure class="memory">
+    <img src="e39f8eda-6e92-4d5c-8f89-647fb2f9ba88.jpeg" alt="Un recuerdo de los dos">
+    <figcaption>“Tenemos recuerdos hermosos, y me emociona pensar en todos los que todavía nos faltan por vivir juntos. ✨”</figcaption>
+   </figure>
+  </div>
 
-    <p>Yo no necesito que todos los días sean perfectos. Quiero seguir construyendo recuerdos contigo, apoyarte en tus sueños, acompañarte en los días difíciles y celebrar contigo cada alegría.</p>
+  <p>Yo no necesito que todos los días sean perfectos. Quiero seguir construyendo recuerdos contigo, apoyarte en tus sueños, acompañarte en los días difíciles y celebrar contigo cada alegría.</p>
 
-    <p>Si pudiera elegir de nuevo, volvería a elegirte. Quiero seguir cuidando lo nuestro y encontrando nuevas razones para enamorarme de ti.</p>
+  <p>Si pudiera elegir de nuevo, volvería a elegirte. Quiero seguir cuidando lo nuestro y encontrando nuevas razones para enamorarme de ti.</p>
 
-    <p class="signature">Te amo muchísimo. 💖<br>Siempre tuyo ❤️</p>
-  </section>
+  <p class="signature">Te amo muchísimo. 💖<br>Siempre tuyo ❤️</p>
+
+  <div class="invitation">
+   <h2>¿Quieres ir a comer tu comida favorita hoy? 🥹❤️</h2>
+   <p>Hay una cita especial esperándote, mi princesa. 💕</p>
+   <button class="choice" onclick="answerYes()">¡Siiii, mi amor! ❤️</button>
+   <button class="choice alt" onclick="answerObvio()">¡Obvio que sí! 🥰</button>
+   <div id="answer"></div>
+  </div>
+ </section>
 </main>
 
 <script>
 function openLetter(){
-  document.getElementById("letter").style.display="block";
-  document.getElementById("hint").style.display="none";
-  document.getElementById("envelope").style.display="none";
-  for(let i=0;i<24;i++) setTimeout(createHeart,i*120);
+ document.getElementById("letter").style.display="block";
+ document.getElementById("hint").style.display="none";
+ document.getElementById("envelope").style.display="none";
+ for(let i=0;i<24;i++)setTimeout(createHeart,i*120);
 }
 function createHeart(){
-  const h=document.createElement("div");
-  h.className="heart";
-  h.textContent=["❤️","💕","💖","💗","💘"][Math.floor(Math.random()*5)];
-  h.style.left=Math.random()*100+"vw";
-  h.style.fontSize=(18+Math.random()*22)+"px";
-  document.body.appendChild(h);
-  setTimeout(()=>h.remove(),4000);
+ const h=document.createElement("div");
+ h.className="heart";
+ h.textContent=["❤️","💕","💖","💗","💘"][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+"vw";
+ h.style.fontSize=(18+Math.random()*22)+"px";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),4000);
+}
+function showAnswer(message){
+ const a=document.getElementById("answer");
+ a.innerHTML=message;
+ a.style.display="block";
+ for(let i=0;i<18;i++)setTimeout(createHeart,i*100);
+}
+function answerYes(){
+ showAnswer("¡Sabía que dirías que sí! 😍❤️<br>Prepárate, mi princesa. Hoy vamos a disfrutar de tu comida favorita. ¡Te amo muchísimo!");
+}
+function answerObvio(){
+ showAnswer("¡Entonces alístate, princesa linda! 🥹💖<br>Hoy tenemos una cita especial. ¡Te amo!");
 }
 </script>
 </body>
