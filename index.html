@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para mi amor ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #ffe0e9, #fff1f4, #ffc6d5);
+      color: #6d1838;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-x: hidden;
+      padding: 24px 14px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 620px;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 30px 22px;
+      border-radius: 25px;
+      box-shadow: 0 10px 35px rgba(135, 25, 65, 0.18);
+    }
+
+    h1 {
+      color: #b51f59;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      color: #9d4566;
+      font-size: 1.05rem;
+    }
+
+    .envelope {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 100px;
+      margin: 22px 0;
+      transition: transform 0.3s;
+      animation: latido 1.5s infinite;
+    }
+
+    .envelope:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    #letter {
+      display: none;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      animation: aparecer 1s ease;
+    }
+
+    #letter h2 {
+      text-align: center;
+      color: #b51f59;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .photos img {
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      box-shadow: 0 4px 12px rgba(135, 25, 65, 0.15);
+    }
+
+    .signature {
+      text-align: center;
+      color: #b51f59;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 25px;
+    }
+
+    .hint {
+      font-size: 0.9rem;
+      color: #99516b;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      pointer-events: none;
+      animation: subir 4s linear forwards;
+      z-index: 5;
+    }
+
+    @keyframes subir {
+      to {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Para mi persona favorita ❤️</h1>
+    <p class="subtitle">Tengo algo muy especial para ti...</p>
+
+    <button class="envelope" id="envelope"
+      aria-label="Abrir mi carta" onclick="openLetter()">
+      💌
+    </button>
+
+    <p class="hint" id="hint">Toca la carta para descubrir tu sorpresa 🥰</p>
+
+    <section id="letter">
+      <h2>Mi amor ❤️</h2>
+
+      <p>
+        Quería regalarte algo diferente, algo que pudieras guardar y volver
+        a leer cada vez que necesitaras recordar cuánto te amo.
+      </p>
+
+      <p>
+        Gracias por formar parte de mi vida, por los momentos que compartimos,
+        por las risas, los abrazos y hasta por esos pequeños detalles que quizá
+        parecen simples, pero que para mí significan muchísimo.
+      </p>
+
+      <p>
+        No necesito que todos los días sean perfectos. Lo que quiero es seguir
+        construyendo recuerdos contigo, acompañarte en tus sueños, apoyarte
+        cuando las cosas se pongan difíciles y celebrar contigo cada alegría.
+      </p>
+
+      <p>
+        Si pudiera elegir de nuevo, volvería a elegirte. Quiero seguir
+        conociéndote, cuidando lo nuestro y encontrando nuevas razones para
+        enamorarme de ti.
+      </p>
+
+      <p>
+        Ojalá esta pequeña sorpresa te saque una sonrisa y te recuerde que
+        hay alguien que piensa en ti con muchísimo amor. ❤️
+      </p>
+
+      <div class="photos" id="photos">
+        <!-- Aquí puedes agregar tus fotos después. -->
+      </div>
+
+      <p class="signature">
+        Te amo muchísimo. 💖<br>
+        Siempre tuyo ❤️
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function openLetter() {
+      document.getElementById("letter").style.display = "block";
+      document.getElementById("hint").style.display = "none";
+      document.getElementById("envelope").style.display = "none";
+
+      for (let i = 0; i < 24; i++) {
+        setTimeout(createHeart, i * 120);
+      }
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = ["❤️", "💕", "💖", "💗", "💘"][
+        Math.floor(Math.random() * 5)
+      ];
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (18 + Math.random() * 22) + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }
+  </script>
+</body>
+</html>
