@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para mi amor ❤️</title>
+<style>
+body {
+  margin: 0;
+  padding: 30px 18px;
+  background: linear-gradient(160deg,#fff7f2,#f6dce4);
+  color: #54263b;
+  font-family: Georgia, serif;
+  text-align: center;
+  min-height: 100vh;
+}
+h1 { color: #922e56; font-size: 36px; }
+.intro { line-height: 1.7; }
+button {
+  border: 0; cursor: pointer;
+  background: #922e56; color: white;
+  padding: 15px 23px; border-radius: 25px;
+  font-size: 17px; margin: 20px;
+}
+.envelope {
+  margin: 30px auto; width: 250px; height: 155px;
+  background: #d77b98; position: relative;
+  border-radius: 8px; cursor: pointer;
+  box-shadow: 0 12px 25px #922e5630;
+}
+.envelope:before {
+  content: "💌"; position: absolute;
+  font-size: 75px; left: 88px; top: 30px;
+}
+#letter {
+  display: none; max-width: 550px;
+  margin: 25px auto; padding: 25px;
+  background: #fffdf9; border-radius: 18px;
+  box-shadow: 0 10px 35px #922e5620;
+  text-align: left; line-height: 1.9;
+  white-space: pre-line;
+}
+#letter h2 { text-align: center; color: #922e56; }
+#photos img {
+  width: 100%; max-height: 350px;
+  object-fit: cover; border-radius: 12px;
+  margin-top: 15px;
+}
+.heart {
+  position: fixed; bottom: -30px;
+  animation: rise 4s linear forwards;
+  pointer-events: none;
+}
+@keyframes rise {
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+</style>
+</head>
+<body>
+<h1>Para mi amor ❤️</h1>
+<p class="intro">
+Preparé algo especial para ti.<br>
+Toca el sobre y abre tu corazón. 🥹
+</p>
+
+<div class="envelope" onclick="openLetter()" role="button"
+     aria-label="Abrir la carta"></div>
+<button onclick="openLetter()">Abrir mi carta ❤️</button>
+
+<article id="letter">
+<h2>Mi vida, ❤️</h2>
+Mi amor:
+
+Quiero que sepas lo importante que eres para mí. A veces siento que las palabras no alcanzan para explicar todo lo que llevo en el corazón, pero hoy quiero intentarlo.
+
+Gracias por los momentos bonitos, por las risas, por los recuerdos que hemos creado y por todo lo que significas en mi vida. Me encanta pensar en nuestras historias, en las pequeñas cosas que solo nosotros entendemos y en todo lo que todavía nos queda por vivir.
+
+No quiero que nunca dudes de lo especial que eres para mí. Quiero seguir construyendo recuerdos contigo, aprender a amarte cada día mejor y cuidar eso tan bonito que tenemos. No prometo ser perfecto, pero sí quiero poner mi corazón en lo nuestro.
+
+Si algún día tienes dudas, vuelve a esta carta y recuerda que hay alguien que te ama, que agradece tenerte en su vida y que desea verte feliz.
+
+Te elijo hoy, y deseo seguir eligiéndote en todos los días que vienen.
+
+<div id="photos">
+<!-- Luego pondremos aquí las fotos de ustedes -->
+</div>
+
+<p style="text-align:right;color:#922e56;font-size:22px">
+Con todo mi amor,<br>
+Siempre tuyo ❤️
+</p>
+</article>
+
+<script>
+function openLetter() {
+  document.getElementById('letter').style.display = 'block';
+  for (let i = 0; i < 24; i++) {
+    let h = document.createElement('span');
+    h.className = 'heart';
+    h.textContent = ['❤️','💕','💗','💖'][Math.floor(Math.random()*4)];
+    h.style.left = Math.random()*100 + 'vw';
+    h.style.fontSize = (18 + Math.random()*18) + 'px';
+    h.style.animationDelay = Math.random() + 's';
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 5000);
+  }
+  setTimeout(() => {
+    document.getElementById('letter').scrollIntoView({behavior:'smooth'});
+  }, 100);
+}
+</script>
+</body>
+</html>
